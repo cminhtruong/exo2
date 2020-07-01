@@ -22,7 +22,7 @@ class ListViewModel : ViewModel() {
         viewModelScope.launch {
             val getGithubRepoAsync = GithubApi.retrofitService.getAllGithubRepo()
             try {
-                _resultApi.value = getGithubRepoAsync.await()
+                _resultApi.value = getGithubRepoAsync.execute().body()
             } catch (e: Exception) {
                 // TODO
             }
