@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
             name="resultVM"
-            type="app.el_even.com.exo1.ListViewModel" />
+            type="app.el_even.com.exo1.result.ListViewModel" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ListFragment">
+        tools:context=".result.ListFragment">
 
-        <TextView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/photo_grid"
+            getListData="@{resultVM.githubRepos}"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@{resultVM.resultApi}" />
-
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:clipToPadding="false"
+            android:padding="6dp"
+            apps:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            apps:spanCount="3"
+            tools:itemCount="5"
+            tools:listitem="@layout/result_item" />
     </FrameLayout>
 </layout>

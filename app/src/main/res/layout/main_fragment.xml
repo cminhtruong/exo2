@@ -7,13 +7,13 @@
 
         <variable
             name="vm"
-            type="app.el_even.com.exo1.MainViewModel" />
+            type="app.el_even.com.exo1.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainFragment">
+        tools:context=".main.MainFragment">
 
         <Button
             android:id="@+id/button"
