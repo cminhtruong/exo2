@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
-import app.el_even.com.exo1.MainFragmentDirections
 import app.el_even.com.exo1.R
 import app.el_even.com.exo1.databinding.MainFragmentBinding
 
